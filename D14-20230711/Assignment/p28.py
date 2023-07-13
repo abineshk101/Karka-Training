@@ -28,13 +28,16 @@ def checkout(name):
     global count
     global rate 
     global totalcost
-    return (f"you have {count} keychains \nThe price per keychain is ${rate+shipcostper} \nThe total cost is ${totalcost+shipcostper+shippingcost+salestax} \nThank you for order, {name}")
+    if count==0:
+        return (f"You havn't take any keychain yet {name}")
+    else:
+        return (f"you have {count} keychains \nThe price per keychain is ${rate+shipcostper} \nThe total cost is ${totalcost+shipcostper+shippingcost+salestax} \nThank you for order, {name}")
 
 user=0
-while user!=4:
-    print("\n1.Add ketchains to  order \n2.Remove keychain from the order \n3.View current order \n4.Checkout \n")
+while user!=4 and user!=5:
+    print("\n1.Add ketchains to  order \n2.Remove keychain from the order \n3.View current order \n4.Checkout  \n5.Exit \n")
     user=int(input("Please enter your choice: "))
-    if user>4: 
+    if user>5: 
         print("You have choosen wrong option try again")
     if user==1:
         add=int(input("\nHow many chains you need to add: "))
@@ -47,4 +50,6 @@ while user!=4:
     if user==4:
         name=input("What is you name? ")
         print("\n",checkout(name))
+    if user==5:
+        print("Thank you for visiting us")
 
