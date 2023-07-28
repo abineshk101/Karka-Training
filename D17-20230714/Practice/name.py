@@ -28,5 +28,9 @@ hobby=place_list[1]["Hobbies"]
 for i in range(len(hobby)):
     print(hobby[i])
 
-place_list=[{"name":"Abinesh","place":"Vattavilai","Hobbies":["cricket","music","socialmedia"]},{"name":"Dhanush","place":"Peruvilai","Hobbies":["cricket","football","volleyball"]},{"name":"Ajitha","Place":"Kannangulam","Hobbies":["Aurywork","gardening","readingbooks"]},{"name":"Abinaya","Place":"Vattavilai","Hobbies":["Watching series","Mobile games","movies"]},{"name":"Sriram","place":"Krishnankovil","Hobbies":["cricket","football","mobile games"]}]
-print(place_list[1]["Hobbies"]) 
+# place_list=[{"name":"Abinesh","place":"Vattavilai","Hobbies":["cricket","music","socialmedia"]},
+#             {"name":"Dhanush","place":"Peruvilai","Hobbies":["cricket","football","volleyball"]},
+#             {"name":"Ajitha","Place":"Kannangulam","Hobbies":["Aurywork","gardening","readingbooks"]},
+#             {"name":"Abinaya","Place":"Vattavilai","Hobbies":["Watching series","Mobile games","movies"]},
+#             {"name":"Sriram","place":"Krishnankovil","Hobbies":["cricket","football","mobile games"]}]
+# print(place_list[1]["Hobbies"]) 
