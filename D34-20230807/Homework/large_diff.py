@@ -6,7 +6,8 @@ for i in range(len(nums_list)):
         num=nums_list[i]-nums_list[n]
         if num>var1:
             var1=num
-print(var1)
+            ans=(f"{var1}({nums_list[i]}-{nums_list[n]})")
+print(ans)
 
 # def difference(numlist):
 #     var1=0
@@ -15,7 +16,8 @@ print(var1)
 #             num=nums_list[i]-nums_list[n]
 #             if num>var1:
 #                 var1=num
-#     return var1
+#                 ans=(f"{var1}({nums_list[i]}-{nums_list[n]})")
+#     return ans
 
 # nums_list=[2,5,8,1,9,3,7]
 # print(difference(nums_list))
