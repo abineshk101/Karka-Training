@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="loginpage.css">
+        <script src="loginpage.js"></script>
+    </head>
+    <center>
+    <div id="welcome">
+        <h2 id="username">Abinesh</h2>
+        <button type="button" onclick="logout()" >logout</button>
+        <p>Click the button to view the user list<button type="button" onclick="list()">View List</button></p>
+        </div>
+        <div id="userlist">
+            <h3>UserList</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="table_body">
+
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        <button id="return" type="button" onclick="welcomepage()">return</button>
+    </center>
+    <center>
+        <div id="loginform">
+        <h1>Login Page</h1>
+        <h3><b>Your email</b><input type="email" id="email"></h3>
+        <h3><b>password</b><input type="password" id="password"></h3>
+        <button id="button" type="button" onclick="login()">Login</button>
+        <button id="register" type="button" onclick="register()">Register</button>
+         </div>
+    <div id="registry_input">
+         <h2>Registration form</h2>
+        <h3><b>User Name<input type="text" id="new_user"></b></h3>
+        <h3><b>Your email</b><input type="email" id="new_email"></h3>
+        <h3><b>password</b><input type="password" id="new_password"></h3>
+        <button id="new_id" type="button" onclick="signup()">sign up</button>
+    </div>
+    <div id="update_button">
+        <h2>Enter your updated username,email,password</h2>
+       <h3><b>updated user Name<input type="text" id="updated_user"></b></h3>
+       <h3><b>updated email</b><input type="email" id="updated_email"></h3>
+       <h3><b>updated password</b><input type="password" id="updated_pass"></h3>
+       <button id="update_id" type="button" onclick="change()">update</button>
+    </center>
+    <script>
+        checklogin()
+    </script>
+</html>
