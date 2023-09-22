@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="firbase.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="design.css">
+        <style>
+            #userlist{display: none;}
+        </style>
+    </head>
+    <center>
+    <body>
+            <h2 id="username"></h2>
+            <button type="button" onclick="logout()" >logout</button>
+            <p>Click the button to view the user list<button type="button" onclick="list()">View List</button></p>
+            <div id="userlist">
+                <h3>UserList</h3>
+                <table  border="1px">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody id="table_body">
+    
+                        
+                    </tbody>
+                </table>
+                
+            </div>
+    </body>
+    </center>
+    <script>checklogin()</script>
+</html>

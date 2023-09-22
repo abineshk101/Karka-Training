@@ -1,0 +1,16 @@
+#welcome{
+    display: none;
+
+}
+#registry_input{
+    display:none;
+}
+#userlist{
+    display: none;
+}
+#return{
+    display: none;
+}
+#update_button{
+    display:none;
+}

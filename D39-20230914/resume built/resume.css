@@ -1,0 +1,22 @@
+.name{
+    padding:50px ;
+    background-color: antiquewhite;
+}
+.tab{
+    padding-left:100px;
+}
+.split{
+    border:solid black;
+    height:90%;
+    width:48%;
+    display: inline-block;
+    
+}
+.split1{
+    border:solid black;
+    height:102%;
+    width:48%;
+    display: inline-block;
+    position:absolute;top: 140%;
+    
+}
