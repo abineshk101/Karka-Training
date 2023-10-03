@@ -1,5 +1,7 @@
 <html>
     <head>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
     </head>
     <body>
         <center>
@@ -7,8 +9,8 @@
             <h1>Login Page</h1>
             <h3><b>Your email</b><input type="email" id="email"></h3>
             <h3><b>password</b><input type="password" id="password"></h3>
-            <button id="button" type="button" onclick="login()">Login</button>
-            <button id="register" type="button" onclick="register()">Register</button>
+            <button id="button" type="submit" onclick="login()">Login</button>
+            <button id="register" type="submit" onclick="register()">Register</button>
             </div>
         </center>
     </body>

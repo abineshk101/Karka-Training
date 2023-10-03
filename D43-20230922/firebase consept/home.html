@@ -1,7 +1,8 @@
 <html>
     <head>
-        <script src="firbase.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="design.css">
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+        <script src="firbase.js"></script>
         <style>
             #userlist{display: none;}
         </style>
@@ -9,8 +10,8 @@
     <center>
     <body>
             <h2 id="username"></h2>
-            <button type="button" onclick="logout()" >logout</button>
-            <p>Click the button to view the user list<button type="button" onclick="list()">View List</button></p>
+            <button type="submit" onclick="logout()" >logout</button>
+            <p>Click the button to view the user list<button type="submit" onclick="getitem()">View List</button></p>
             <div id="userlist">
                 <h3>UserList</h3>
                 <table  border="1px">
