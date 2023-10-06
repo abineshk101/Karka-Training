@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+}
+#namepad{
+    height: 11%;
+    background-color:#2874f0;
+    align-items: center;
+    position: relative;
+}
+#logo{
+    height:100%;
+    width: 6%;
+    margin-left:15%;
+}
+.search_bar{
+    height: 33px;  
+    width: 330px;
+}
+#search_button{
+    height: 32px;
+    width: 38px;
+    padding-bottom: 9px;
+    position: absolute;
+    top: 15px;
+    left: 583px;
+    background-color: white;
+    border-color: white;
+}
+#srch_img{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 22px;
+    left: 596px
+}
+#login_btn{
+    width: 143px;
+    height: 32px;
+    background-color: white;
+    border-color: #2874f0;
+    margin-left: 36px;
+}
+#cart_logo{
+    width: 32px;
+    height: 32px;
+}
+
+#noti_logo{
+    height: 18px;
+    width: 19px;
+    margin-right: 10px;
+}
+#item_btn{
+    height: 135px;
+    width: 117px;
+    padding: 0%;
+    /* border: none; */
+}
+

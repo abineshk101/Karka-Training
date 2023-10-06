@@ -14,8 +14,78 @@ const firebaseConfig = {
 
 
 function register(){
-    window.location="register.html"
+    window.location="register1.html"
 }
+
+var auth = firebase.auth()
+console.log(auth)
+const registerForm = () => {
+    let name = document.getElementById("new_user").value;
+    email = document.getElementById("new_email").value;
+    password = document.getElementById("new_password").value;
+    auth.createUserWithEmailAndPassword(email, password).then((result) => {
+    console.log(result)
+    signup()
+    })
+.catch((error) => {
+     console.log(error.code);
+      console.log(error.message);
+    alert(error.message)
+    })
+}
+
+
+const loginForm = () => {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    auth.signInWithEmailAndPassword(email, password)
+    .then((result) => {
+    login()
+    console.log(result)
+    })
+    .catch((error) => {
+     alert("Please Register First")
+     window.location = "register.html"
+     console.log(error.code);
+     console.log(error.message);
+})
+}
+
+
+// const dele = () => {
+//   const user = firebase.auth().currentUser;
+//   user.delete().then(() => {
+//     // User deleted.
+//     alert("Account Deleted Successfully")
+//     logout()
+//     del()
+//   }).catch((error) => {
+//   });
+// }
+
+// function authUpdate() {
+//   window.location = "authUp.html"
+
+// }
+
+// function updateUserData() {
+//   var userNow = firebase.auth().currentUser;
+//   var u_name = document.getElementById("a_name").value
+//   var u_email = document.getElementById("a_mail").value
+//   var u_password = document.getElementById("a_password").value
+//   userNow.updateProfile({
+//     name: u_name,
+//     email: u_email,
+//     password: u_password,
+//   }).then(function () {
+//     var name = userNow.name;
+//     var email = userNow.email;
+//     var password = userNow.password;
+//   }, function (error) {
+//     console.log(error)
+//   });
+// }
+// ///////////
 function signup(){
     console.log('register function called');
     let reg_name=document.getElementById("new_user").value
@@ -41,7 +111,7 @@ function signup(){
             }
         })
         alert("You have registered your account succesfully")
-        window.location="login.html"
+        window.location="login1.html"
 }
 
  
@@ -51,7 +121,7 @@ function checklogin(){
         let login_username=document.getElementById("username")
         login_username.innerHTML=`Welcome ${localStorage.getItem("logname")}`
     }else{
-        window.location="login.html"
+        window.location="login1.html"
     }
 }
 function login(){
@@ -69,20 +139,20 @@ function login(){
                         alert("login successfully")
                         localStorage.setItem("loggedin",true)
                         localStorage.setItem("logname",data[i].name)
-                        window.location="home.html"; 
+                        window.location="home1.html"; 
                         break   
                     }                   
                 }
             }if(isuser_alive==false){
                 alert("pls register")
-            window.location="login.html"}
+            window.location="login1.html"}
         })
 }                
 
 function logout(){
     localStorage.removeItem("loggedin")
     localStorage.removeItem("logname")
-    window.location="login.html"
+    window.location="login1.html"
 }
 
 // let alldata=[];
@@ -145,7 +215,32 @@ function update(mail){
     checklogin()
 }
 
-
+// function update(mail){
+//     localStorage.setItem("getmail",mail)
+//     window.location.href="update.html?"+mail;
+// }
+// function change(){
+//     let change_name=document.getElementById("updt_user").value
+//     let change_email=document.getElementById("updt_email").value
+//     let change_password=document.getElementById("updt_password").value
+//     let getmail=localStorage.getItem("getmail")
+//     alert(getmail)
+//     dataRef.once("value")
+//     .then(function(source){
+//         let details=source.val();
+//         console.log(details)
+//         for(i=0;i<details.length;i++){
+//             if(details[i].email==getmail){
+//                 details[i].email=change_email
+//                 details[i].password=change_password
+//                 details[i].name=change_name
+//             }
+//         }
+//         db.ref("registeredUsers").set(details)
+//         localStorage.removeItem("getmail")
+//         getitem()
+//     })
+// }
 
 
 

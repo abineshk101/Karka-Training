@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+        <script src="firbase1.js"></script>
+        <style>
+            #userlist{display: none;}
+        </style>
+    </head>
+    <center>
+    <body>
+            <h2 id="username"></h2>
+            <button type="submit" onclick="logout()" >logout</button>
+            <p>Click the button to view the user list<button type="submit" onclick="getitem()">View List</button></p>
+            <div id="userlist">
+                <h3>UserList</h3>
+                <table  border="1px">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody id="table_body">
+    
+                        
+                    </tbody>
+                </table>
+                
+            </div>
+    </body>
+    </center>
+    <script>checklogin()</script>
+</html>
