@@ -1,64 +1,68 @@
-let resume_details={};
-
-let temp={};
-
-function val(a,b){
-    if(b){
-        if(resume_details[b]){
-            resume_details[b]={...resume_details[b]}
-        }else{
-        resume_details[b]={}
-        }
-        resume_details[b][a.name]=a.value
+let resume_detail={}
+let temp={}
+function val(get_info,key_name){
+  if(key_name){
+    if(resume_detail[key_name]){
+      resume_detail[key_name]={...resume_detail[key_name]}
     }else{
-        resume_details[a.name]=a.value
-    }display()
+      resume_detail[key_name]={}
+    }resume_detail[key_name][get_info.name]=get_info.value
+  }
+  else{
+    resume_detail[get_info.name]=get_info.value
+  }
+  display()
 }
 
-function add_skill(key,id,tbl_id,edu){
-    if(edu){
-        if(!resume_details[edu]){
-            resume_details[edu]=[]
-        }
-        resume_details[edu].push(temp)
-        let keys=Object.keys(temp)
-        for(i=0;i<keys.length;i++){
-            document.getElementById(keys[i]).value=""
-        }
-        temp={}
-        display()
-    }else{
-        if(!resume_details[key]){
-            resume_details[key]=[]
-        }
-        resume_details[key].push(document.getElementById(id).value)
-        document.getElementById(id).value=""
-        display()
-        htmldata=""
-        for(i=0;i<resume_details[key].length;i++){
-            htmldata=htmldata+`<div id="${key[i]}"><button type="button" onclick="del('${[i]}','${key}')" class="btn btn-primary">
-            remove</button><ul>${resume_details[key][i]}</ul></div>`
-        }
-        document.getElementById(tbl_id).innerHTML=htmldata}
-}
-function display(){
-    document.getElementById("dispaly_items").innerHTML=JSON.stringify(resume_details,undefined,2)
-}
-function del(indx,key_name){
-    resume_details[key_name].splice(indx,1)
-    result=document.getElementById(`${key_name[indx]}`)
-    result.remove()
+function add_item(key_name,id,tbl_id,edu_info){
+  if(edu_info){
+    if(!resume_detail[edu_info]){
+      resume_detail[edu_info]=[]
+    }
+      resume_detail[edu_info].push(temp)
+      let keyss=Object.keys(temp)
+      let final_out=""
+      for(i=0;i<keyss.length;i++){
+        document.getElementById(keyss[i]).value=""
+      }
+    temp={}
+    let ans=""
+    for(i=0;i<resume_detail[edu_info].length;i++){
+      let a=resume_detail[edu_info][i].institute_name
+      let b=resume_detail[edu_info][i].level
+      let c=resume_detail[edu_info][i].year
+      let d=resume_detail[edu_info][i].percentage
+      ans=ans+`<tr id="${edu_info[i]}"><td>${a}</td><td>${b}</td><td>${c}</td><td>${d}</td><td><button type="button" class="btn btn-primary" onclick="del('${i}','${edu_info}')">remove</button></td></tr>`
+    }document.getElementById("edu_tbl").innerHTML=ans
     display()
-    // let skill_item=[]
-    // for(i=0;i<resume_details.skills.length;i++){
-    //     if(resume_details.skills[i]!=skl){
-    //         skill_item.push(resume_details.skills[i])
-    //         resume_details.skills=skill_item
-    //     }
-    // }console.log(resume_details)
+  }else{
+  if(key_name){
+    if(!resume_detail[key_name]){
+      resume_detail[key_name]=[]
+    }
+  }resume_detail[key_name].push(document.getElementById(id).value)
+  document.getElementById(id).value=""
+  let htmldata=""
+  for(i=0;i<resume_detail[key_name].length;i++){
+    htmldata=htmldata+`<div id="${key_name[i]}" class="alert alert-danger"><button type="button" class="btn btn-primary" onclick="del('${[i]}','${key_name}')">remove</button><ol>${resume_detail[key_name][i]}</ol></div>`
+  }document.getElementById(tbl_id).innerHTML=htmldata}
+  display()
 }
 
-function get_info(item){
-    temp[item.name]=item.value
+function del(idx,key_name){
+  resume_detail[key_name].splice(idx,1)
+  result=document.getElementById(key_name[idx])
+  result.remove()
+  display()
 }
 
+function add_edu(got){
+  temp[got.name]=got.value
+}
+
+
+
+
+function display(){
+document.getElementById("show").innerHTML=JSON.stringify(resume_detail)
+}
