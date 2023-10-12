@@ -47,13 +47,18 @@ function add_item(key_name,id,tbl_id,edu_info){
   document.getElementById(id).value=""
   let htmldata=""
   for(i=0;i<resume_detail[key_name].length;i++){
-    htmldata=htmldata+`<div id="${key_name[i]}" class="alert alert-danger"><button type="button" class="btn btn-primary" onclick="del('${[i]}','${key_name}')">remove</button><ol>${resume_detail[key_name][i]}</ol></div>`
+    htmldata=htmldata+`<div id="${key_name[i]}" class="alert alert-danger"><button type="button" class="btn btn-primary" onclick="del('${resume_detail[key_name][i]}','${key_name}','${i}')">remove</button><ol>${resume_detail[key_name][i]}</ol></div>`
   }document.getElementById(tbl_id).innerHTML=htmldata}
   display()
 }
 
-function del(idx,key_name){
-  resume_detail[key_name].splice(idx,1)
+function del(get_item,key_name,idx){
+  let skl=[]
+  for(i=0;i<resume_detail[key_name].length;i++){
+    if(resume_detail[key_name][i]!=get_item){
+      skl.push(resume_detail[key_name][i])
+    }
+  }resume_detail[key_name]=skl
   result=document.getElementById(key_name[idx])
   result.remove()
   display()

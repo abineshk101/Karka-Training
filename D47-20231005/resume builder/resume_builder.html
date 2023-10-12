@@ -45,7 +45,7 @@
             </div>
           </div>
             <b>Educational Details</b>
-          <div class="row">
+          <div class="row"><h6>(please enter <b>10th,12th,degree</b> in order)</h6>
               <div class="col-3">
                 <input class="form=control" placeholder="Institute Name" id="institute_name" name="institute_name" onkeyup="add_edu(this)">
               </div>
@@ -74,6 +74,13 @@
                 </tbody>
                 
               </table>
+          </div>
+          <label><b>Certificates</b></label>
+          <div class="col-8">
+            <input class="form-control" type="text" id="certi_list">
+            <button class="btn btn-success" type="button" onclick="add_item('certificates','certi_list','certi_tbl')">ADD</button>
+            <div id="certi_tbl">
+            </div>
           </div>
         </div>
       </form><br>
