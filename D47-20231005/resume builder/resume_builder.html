@@ -61,7 +61,7 @@
               <div class="col">
                 <button type="button" class="btn btn-success" onclick="add_item(null,null,null,'education')"> submit</button>
               </div>
-              <table id="final_show">
+              <table id="final_show" class="table table-warning table-borderless">
                 <tr id="heading" class="alert alert-danger">
                   <td>Institute</td>
                   <td>Level</td>
@@ -86,6 +86,35 @@
               <input class="form-control" type="text" id="proj_list">
               <button class="btn btn-success" type="button" onclick="add_item('projects','proj_list','proj_tbl')">ADD</button>
               <div id="proj_tbl">
+              </div>
+              <b>Experience</b>
+            <div class="row">
+                <div class="col-3">
+                  <input class="form=control" placeholder="Company Name" id="company_name" name="company_name" onkeyup="add_edu(this)">
+                </div>
+                <div class="col-3">
+                  <input class="form=control" placeholder="Position" id="position" name="position" onkeyup="add_edu(this)">
+                </div>
+                <div class="col-3">
+                  <input class="form=control" placeholder="Years" id="years" name="years" onkeyup="add_edu(this)">
+                </div>
+                <div class="row"></div>
+                <div class="col-3">
+                  <button type="button" class="btn btn-success" onclick="add_item(null,null,null,null,'experience')"> submit</button>
+                </div>
+                </div>
+                <table class="table table-warning table-borderless">
+                  <tr id="heading">
+                    <td>Company Name</td>
+                    <td>position</td>
+                    <td>Years</td>
+                    <td>To remove data<td>
+                  </tr>
+                  <tbody id="exp_tbl">
+                    
+                  </tbody>
+                  
+                </table><hr>
               </div>
           </div>
         </div>

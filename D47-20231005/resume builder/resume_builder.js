@@ -14,8 +14,29 @@ function val(get_info,key_name){
   display()
 }
 
-function add_item(key_name,id,tbl_id,edu_info){
-  if(edu_info){
+function add_item(key_name,id,tbl_id,edu_info,exp_info){
+  if(exp_info){
+    if(!resume_detail[exp_info]){
+      resume_detail[exp_info]=[]
+    }
+      resume_detail[exp_info].push(temp)
+      let keyss=Object.keys(temp)
+      for(i=0;i<keyss.length;i++){
+        document.getElementById(keyss[i]).value=""
+      }
+    temp={}
+    let ans=""
+    for(i=0;i<resume_detail[exp_info].length;i++){
+      let a=resume_detail[exp_info][i].company_name
+      let b=resume_detail[exp_info][i].position
+      let c=resume_detail[exp_info][i].years
+      ans=ans+`<tr id="experi${i}"><td>${a}</td>
+                                      <td>${b}</td>
+                                      <td>${c}</td>
+                                      <td><button type="button" class="btn btn-primary" onclick="del_exp('${exp_info}','${i}')">remove</button></td></tr>`
+    }document.getElementById("exp_tbl").innerHTML=ans
+  }
+  else if(edu_info){
     if(!resume_detail[edu_info]){
       resume_detail[edu_info]=[]
     }
@@ -74,6 +95,18 @@ function del(get_item,key_name,idx){
   display()
 }
 
+function del_exp(exp_info,idx){
+  let removed_obj=[]
+  for(i=0;i<resume_detail[exp_info].length;i++){
+    if(i!=idx){
+      removed_obj.push(resume_detail[exp_info][i])
+    }
+  }resume_detail[exp_info]=removed_obj
+  result=document.getElementById(`experi${idx}`)
+  result.remove()
+  display()
+}
+
 function add_edu(got){
   temp[got.name]=got.value
 }
@@ -99,8 +132,8 @@ function sent_ajx(){
       confirm.log(error)
     }
   })
-  // window.location.reload()
 }
+
 function redirect(){
   window.location="list.html"
 }
