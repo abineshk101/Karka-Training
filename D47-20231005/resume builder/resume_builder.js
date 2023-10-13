@@ -35,7 +35,7 @@ function add_item(key_name,id,tbl_id,edu_info){
                                       <td>${b}</td>
                                       <td>${c}</td>
                                       <td>${d}</td>
-                                      <td><button type="button" class="btn btn-primary" onclick="del('${i}','${edu_info}')">remove</button></td></tr>`
+                                      <td><button type="button" class="btn btn-primary" onclick="del(${null},'${edu_info}','${i}')">remove</button></td></tr>`
     }document.getElementById("edu_tbl").innerHTML=ans
     display()
   }else{
@@ -53,12 +53,17 @@ function add_item(key_name,id,tbl_id,edu_info){
 }
 
 function del(get_item,key_name,idx){
+  if(key_name && idx){
+    resume_detail[key_name].splice(idx,1)
+  }else
+  {
   let skl=[]
   for(i=0;i<resume_detail[key_name].length;i++){
     if(resume_detail[key_name][i]!=get_item){
       skl.push(resume_detail[key_name][i])
     }
   }resume_detail[key_name]=skl
+  }
   result=document.getElementById(key_name[idx])
   result.remove()
   display()
