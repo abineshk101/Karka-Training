@@ -74,13 +74,16 @@ function add_item(key_name,id,tbl_id,edu_info,exp_info){
 }
 
 function del(get_item,key_name,idx){
-  if(key_name && idx){
+  if(!get_item){
     let removed_obj=[]
     for(i=0;i<resume_detail[key_name].length;i++){
       if(i!=idx){
         removed_obj.push(resume_detail[key_name][i])
       }
-    }resume_detail[key_name]=removed_obj
+    }
+    resume_detail[key_name]=removed_obj
+    display()
+
   }else
   {
   let skl=[]
@@ -88,7 +91,9 @@ function del(get_item,key_name,idx){
     if(resume_detail[key_name][i]!=get_item){
       skl.push(resume_detail[key_name][i])
     }
-  }resume_detail[key_name]=skl
+  }
+  resume_detail[key_name]=skl
+  display()
   }
   result=document.getElementById(key_name[idx])
   result.remove()
