@@ -159,7 +159,10 @@ function get_ajx(){
                             <td>${list1[i].id}</td>
                             <td>${list1[i].user}</td>
                             <td><button type="button" onclick="del_ajx('${list1[i].id}')" class="btn btn-success">remove</button></td>
-                            <td><a href="resume.html?id=${list1[i].id}">show my resume</a></td>
+                            <td><a href="resume template 3/resume_3.html?id=${list1[i].id}"><img src="/home/abinesh/agaram/Agaram/D47-20231005/resume builder/resume template 3/resume-cv-design-1.png"></a></td>
+                            <td><a href="resume template 2/resume_2.html?id=${list1[i].id}"><img src="/home/abinesh/agaram/Agaram/D47-20231005/resume builder/resume template 2/resume_01.jpg"></a></td>
+                            <td><a href="resume template 4/resume_4.html?id=${list1[i].id}"><img src="/home/abinesh/agaram/Agaram/D47-20231005/resume builder/resume template 4/free-resume-html.png"></a></td>
+
                           <tr>`
       }
       document.getElementById("tbl").innerHTML=id_name
@@ -210,32 +213,54 @@ function show_resume(){
 
           let input_objective=taken.objective
           $('#resume_objective').html(input_objective)
-          // let input_email=taken.email
-          // let input_number=taken.number
+          let input_email=taken.email
+          $('#resume_email').html(input_email)
+          let input_number=taken.number
+          $('#resume_number').html(input_number)
           // let input_fthr_name=taken.personal_details.father_name
           // let input_mthr_name=taken.personal_details.mother_name
-          // let input_address=taken.personal_details.address
-          // let input_district=taken.personal_details.district
+          let input_address=taken.personal_details.address
+          $('#resume_address').html(input_address)
+          let input_district=taken.personal_details.district
+          $('#resume_dist').html(input_district)
           let input_skills=taken.skills
-          let skill_data="Programing skills"
+          let skill_data=""
           for(i=0;i<input_skills.length;i++){
-            skill_data=skill_data+`<ol>&#9658;${input_skills[i]}</ol>`
+            skill_data=skill_data+`<ol><b>&#10146;</b> ${input_skills[i]}</ol>`
           }$('#prgrm_skill').html(skill_data)
 
           let input_lang=taken.languages
           let lang_data=""
           for(i=0;i<input_lang.length;i++){
-            lang_data=lang_data+`<ol>&#10146;${input_lang[i]}</ol>`
+            lang_data=lang_data+`<ol><b>&#10146;</b> ${input_lang[i]}</ol>`
           }$('#lang_order').html(lang_data)
 
           let input_edu=taken.education
-          let edu_data=""
+          let edu_data="<thead><tr><th>Institute Name</th><th>Level</th><th>percentage</th><th>year</th></tr></thead>"
           for(i=0;i<input_edu.length;i++){
-            $('#school_name').html(input_edu[i].institute_name)
-            $('#sslc').html(input_edu[i].level)
-            input_edu[i].year
-            $('#percent').html(input_edu[i].percentage)
-          }
+            edu_data=edu_data+`<tr>
+                                  <td>${input_edu[i].institute_name}</td>
+                                  <td>${input_edu[i].level}</td>
+                                  <td>${input_edu[i].percentage}</td>
+                                  <td>${input_edu[i].year}</td>
+                                  </tr>`  
+          }$('#resume_edu').html(edu_data)
+
+          let input_exp=taken.experience
+          let exp_data="<thead><tr><th>Company Name</th><th>position</th><th>years</th></tr></thead>"
+          for(i=0;i<input_exp.length;i++){
+            exp_data=exp_data+`<tr>
+                                  <td>${input_exp[i].company_name}</td>
+                                  <td>${input_exp[i].position}</td>
+                                  <td>${input_exp[i].years}</td>
+                                  </tr>`  
+          }$('#resume_exp').html(exp_data)
+
+          let input_hob=taken.hobbies
+          let hob_data=""
+          for(i=0;i<input_hob.length;i++){
+            hob_data=hob_data+`<ol><b>&#9658;</b> ${input_hob[i]}</ol>`
+          }$('#resume_hobby').html(hob_data)
         }
       }
     )
