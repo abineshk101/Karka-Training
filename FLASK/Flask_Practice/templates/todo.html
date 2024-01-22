@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h2>Welcome to todo page</h2>
+    <ul>
+    {% for n in range(items|length) %}
+        <li>{{items[n]}} <a href="/delete/{{items[n]}}">delete</a></li><a href="/updated/{{n}}">update</a>
+    {% endfor %}
+    </ul>
+
+    <form method="POST"  action=/todo>
+        <input type="text" name="get_from_user"/>
+        <input type="submit" value="submit"/>
+    </form>
+
+
+</body>
+</html>
