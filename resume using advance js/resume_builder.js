@@ -155,6 +155,7 @@ function get_ajx(){
       list1=JSON.parse(show).data
       id_name=""
       for(i=0;i<list1.length;i++){
+        console.log(list1[i])
         id_name=id_name+`<tr>
                             <td>${list1[i].id}</td>
                             <td>${list1[i].user}</td>
