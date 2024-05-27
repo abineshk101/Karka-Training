@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:rgb(45 42 42) ;
+}
+#line{
+    width: 40%;
+    height: 3px;
+    background-color: rgb(79 209 90);
+    display: inline-block;
+    margin-left: 60%;
+}
+#recent_project{
+    display: inline-block;
+    font-family: Arial;
+    color: white;
+    margin: 73px 0px 0px 591px;
+    font-size: xx-large;
+}
+#portfolio{
+    margin: 34px 0px 0px 31px;
+    color: aliceblue;
+}
+#AB-box1 {
+    height: 62vh;
+    width: 25%;
+    background-color: rgb(79 209 90);
+    margin-top: 35px;
+    margin-left: 5vw;
+}
+#AB-box2 {
+    height: 62vh;
+    width: 26vw;
+    background-color: rgb(192, 219, 194);
+    margin-top: -67vh;
+    margin-left: 8vw;
+}
+#details{
+    color: white;
+    font-family: sans-serif;
+    font-size: 26px;
+    margin-left: 53vw;
+    margin-top: -50vh;
+}
+strong{
+    color:rgb(79 209 90) ;
+}
+button {
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    background: #333;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    font-family: Consolas, Courier New, monospace;
+    border: solid #404c5d 1px;
+    font-size: 16px;
+    color:white;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #2e2d2d, #212121);
+    box-shadow: -1px -5px 15px rgb(79 209 90), 5px 5px 15px rgb(79 209 90);
+  }
+  
+  button:hover {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 13px rgb(79 209 90);
+    color:rgb(79 209 90);
+  }
+  
+  button:active {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 33px rgb(79 209 90);
+    color: rgb(79 209 90);
+  }
+  
+
+#front_button{
+    position: absolute;
+    bottom: 5vh;
+    left: 123vh;
+
+}
+img{
+    width: 26vw;
+    height: 62vh;
+}
+
+@media only screen and (max-width: 600px) {
+    #recent_project {
+        margin: 5vh 2vw 0; 
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #AB-box1 {
+        height: 40vh;
+    }
+
+    #AB-box2 {
+        height: 40vh; 
+        margin-top: -42vh; 
+    }
+}

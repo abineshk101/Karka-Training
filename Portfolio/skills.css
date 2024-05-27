@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:rgb(45 42 42) ;
+}
+img{
+    height: 100%;
+     width:100%;
+}
+#AB-box1{
+    height: 74vh;
+    width: 25%;
+    background-color: rgb(79 209 90);
+    margin-top: 113px;
+    margin-left: 71vw;
+}
+#AB-box2{
+    height: 70vh;
+    width: 28%;
+    background-color: rgb(192, 219, 194);
+    margin-top: -76vh;
+    margin-left: 65vw;
+}
+#skills{
+    margin-top: -68vh;
+}
+.outer_box{
+    width: 210px;
+    height: 20px;
+    border: 1px;
+    background-color: rgb(98, 97, 96);
+    margin-right: 20%;
+}
+#inner_box1{
+    width: 70%;
+    height: 20px;
+    border: 1px;
+    background-color: rgb(79 209 90);
+    margin-right: 20%;
+}
+#total_skills {
+    width: 19vh;
+    height: 50vh;
+    font-family: 'Lucida Sans';
+    color: white;
+    margin-left: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.skill_percent{
+    margin-left: 15vw;
+}
+#inner_box2{
+    width: 60%;
+    height: 20px;
+    border: 1px;
+    background-color: rgb(79 209 90);
+    margin-right: 20%;
+}
+#inner_box3{
+    width: 80%;
+    height: 20px;
+    border: 1px;
+    background-color: rgb(79 209 90);
+    margin-right: 20%;
+}
+#inner_box4{
+    width: 70%;
+    height: 20px;
+    border: 1px;
+    background-color: rgb(79 209 90);
+    margin-right: 20%;
+}
+#inner_box5{
+    width: 70%;
+    height: 20px;
+    border: 1px;
+    background-color: rgb(79 209 90);
+    margin-right: 20%;
+}
+button {
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    background: #333;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    font-family: Consolas, Courier New, monospace;
+    border: solid #404c5d 1px;
+    font-size: 16px;
+    color:white;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #2e2d2d, #212121);
+    box-shadow: -1px -5px 15px rgb(79 209 90), 5px 5px 15px rgb(79 209 90);
+  }
+  
+  button:hover {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 13px rgb(79 209 90);
+    color:rgb(79 209 90);
+  }
+  
+  button:active {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 33px rgb(79 209 90);
+    color: rgb(79 209 90);
+  }
+  
+#back_button{
+    position: absolute;
+    bottom: 5vh;
+    left: 12vh;
+
+}
+#front_button{
+    position: absolute;
+    bottom: 5vh;
+    left: 109vh;
+
+}
+#Technical_skills{
+    color:  aliceblue;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+#description{
+    margin-left:75px ;
+    color:  aliceblue;
+    font-family:Tahoma;
+    font-size: 19px;
+}
+#portfolio{
+    position: absolute;
+    top: 30PX;
+    left: 30PX;
+    color: aliceblue;
+}
+
+@media only screen and (max-width: 1200px) {
+    #AB-box1 {
+        margin-left: 55vw;
+    }
+    #AB-box2 {
+        margin-left: 50vw;
+    }
+    #total_skills {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #AB-box1, #AB-box2 {
+        width: 100%;
+        margin-left: 0;
+    }
+    #back_button, #front_button {
+        position: static;
+        margin-top: 20px;
+    }
+    #total_skills {
+        margin-left: 20px;
+    }
+}

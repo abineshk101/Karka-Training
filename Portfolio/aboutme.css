@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(45 42 42) ;
+}
+
+#portfolio{
+    margin: 34px 0px 0px 31px;color: aliceblue;
+}
+
+#whole_page{
+    height: 100vh;
+    width: 100vw;
+}
+#content{
+    font-size: 3vh;
+    font-family: 'Lucida Sans Unicode';
+    color: white;
+}
+
+img{
+    height:100% ;
+    width:100%;
+}
+#aboutme{
+    font-size:6vh;
+    color:rgb(79 209 90) ;
+    font-family: Arial
+}
+
+#AB-box1 {
+    height: 50vh;
+    width: 25%;
+    background-color: rgb(79 209 90);
+    margin: 153px 0 0 110px;
+}
+
+#AB-box2 {
+    height: 51vh;
+    width: 26%;
+    background-color: rgb(192, 219, 194);
+    position: absolute;
+    left: 10vw;
+    top: 11vw;
+}
+
+#line {
+    width: 144%;
+    height: 3px;
+    background-color: rgb(79 209 90);
+    margin-left: 30%;
+}
+
+#info {
+    max-width: 300px;
+    position: absolute;
+    top: 14vh;
+    right: 15vw;
+}
+
+button {
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    background: linear-gradient(145deg, #2e2d2d, #212121);
+    color: white;
+    font-family: Consolas, Courier New, monospace;
+    font-size: 16px;
+    border: solid #404c5d 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: -1px -5px 15px rgb(79 209 90), 5px 5px 15px rgb(79 209 90);
+}
+
+button:hover {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 13px rgb(79 209 90);
+    color: rgb(79 209 90);
+}
+
+button:active {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 33px rgb(79 209 90);
+    color: rgb(79 209 90);
+}
+
+#back_button {
+    position: absolute;
+    bottom: 5vh;
+    left: 73vh;
+}
+
+#front_button {
+    position: absolute;
+    bottom: 5vh;
+    left: 118vh;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #AB-box1 {
+        width: 61%;
+        margin: 101px 0 0 66px;
+    }
+
+    #info {
+        right: -98vw;
+        top: 17vh;
+    }
+
+    #AB-box2 {
+        width: 66%;
+        left: 26vw;
+        top: 34vw;
+    }
+
+    #back_button {
+        left: 46vh;
+    }
+
+    #front_button {
+        left: 87vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #AB-box1,
+    #AB-box2 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #info {
+        right: 5vw;
+        top: 73vh;
+    }
+
+    #back_button{
+        right: 43%;
+        transform: translateX(-50%);
+        width: 120px;
+        bottom: -52%;
+    }
+    #front_button {
+        left: 43%;
+        transform: translateX(-50%);
+        width: 120px;
+        bottom: -52%;
+    }
+}

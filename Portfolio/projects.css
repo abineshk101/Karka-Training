@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:rgb(45 42 42) ;
+}
+#line{
+    width: 48%;
+    height: 3px;
+    background-color: rgb(79 209 90);
+    display: inline-block;
+    margin-left: 12%;
+}
+#recent_project{
+    display: inline-block;
+    font-family: Arial;
+    color: white;
+    margin: 54px 0px 0px 300px;
+    font-size: xx-large;
+}
+#project_list {
+    max-width: 80vw;
+    height: 58vh;
+    margin: 67px 0px 0px 173px;
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    height: 43vh;
+}
+#portfolio{
+    margin: 34px 0px 0px 31px;
+    color: aliceblue;
+}
+#project_names {
+    display: flex;
+    flex-direction: row;
+    width: 73vw;
+    font-family: sans-serif;
+    justify-content: space-between;
+    margin: -88px 0px 0px 177px;
+    color: white;
+    font-size: x-large;
+}
+button {
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    background: #333;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    font-family: Consolas, Courier New, monospace;
+    border: solid #404c5d 1px;
+    font-size: 16px;
+    color:white;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #2e2d2d, #212121);
+    box-shadow: -1px -5px 15px rgb(79 209 90), 5px 5px 15px rgb(79 209 90);
+  }
+  
+  button:hover {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 13px rgb(79 209 90);
+    color:rgb(79 209 90);
+  }
+  
+  button:active {
+    box-shadow: 1px 1px 13px rgb(79 209 90), -1px -1px 33px rgb(79 209 90);
+    color: rgb(79 209 90);
+  }
+  
+#back_button{
+    position: absolute;bottom: 5vh;left: 73vh;
+
+}
+#front_button{
+    position: absolute;bottom: 5vh;left: 118vh;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #recent_project {
+        font-size: 5vw; 
+    }
+
+    #portfolio, #project_names {
+        font-size: 3vw; 
+    }
+
+    button {
+        width: 30%;
+        max-width: 120px;
+        font-size: 3vw; 
+    }
+}
